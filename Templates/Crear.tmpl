@@ -1,0 +1,51 @@
+{{define "Crear"}}
+<!doctype html>
+{{template "Inicio"}}
+
+    <div class="card">
+        <div class="card-header">
+            Ticket
+        </div>
+        <div class="card-body">
+            <form method = "post" action = "/registrar" >
+                <div class="form-group">
+                    <label for="Usuario"></label>
+                    <small id="helpId" class="form-text text-muted">Usuario</small> <br>
+                    <input type="text"
+                      class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+                  <div class="form-group">
+                    <label for="Fecha Creacion"></label>
+                    <small id="helpId" class="form-text text-muted">Fecha Creacion</small> <br>
+                    <input type="text"
+                      class="form-control" name="creacion" id="creacion" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+                  <div class="form-group">
+                    <label for="Fecha Actualizacion"></label>
+                    <small id="helpId" class="form-text text-muted">Fecha actualizacion</small> <br>
+                    <input type="text"
+                      class="form-control" name="actualizar" id="actualizar" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+                  <div class="form-group">
+                    <label for="Estado"></label>
+                    <small id="helpId" class="form-text text-muted">Estado</small> <br>
+                    <input type="text"
+                      class="form-control" name="estado" id="estado" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+
+
+                  <button type="submit"  class="btn btn-primary">Registrar Ticket</button>
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+{{template "Fin"}}
+{{end}}

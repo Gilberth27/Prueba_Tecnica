@@ -1,0 +1,16 @@
+docker run --name mysql-dvp -e MYSQL_ROOT_PASSWORD=prueba1 -d -p 8090:80 mysql:latest
+
+create database tickets;
+
+
+use tickets
+create table Ticket (ID int unsigned not null auto_increment comment 'Llave primaria', USUARIO varchar (30) not null, FCH_CRE date, FCH_UPD date, ESTADO varchar (20), primary key (ID));
+
+
+--------------------------------------
+## Comandos en la consola del editor de texto, modulos para go  
+
+go mod init Prueba-Tecnica -- 
+
+go get -u github.com/gorilla/mux -- complemento para usar router como variable de enrutamiento
+go get -u github.com/go-sql-driver/mysql ---  se ejecuta para un drive que permite que GO se conecte a una base de datos
