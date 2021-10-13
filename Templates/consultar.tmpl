@@ -2,7 +2,7 @@
 {{template "Inicio"}}
 
 
-    <a name="" id="" class="btn btn-primary"  href="/crear" role="button">Crear Ticket</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -14,15 +14,29 @@
             </tr>
         </thead>
         <tbody>
+        {{range. }}
+
             <tr>
-                <td>2</td>
-                <td>gilberth</td>
-                <td>22-10-2021</td>
-                <td>21-10-2021</td>
-                <td>activo</td>
+                <td>{{.ID}}</td>
+                <td>{{.USUARIO}}</td>
+                <td>{{.FECHA_CRE}}</td>
+                <td>{{.FECHA_UPD}}</td>
+                <td>{{.ESTADO}}</td>
+                <td>Las acciones permitidas son: |
+                <a name="" id="" class="btn-warning" href="/eliminar?ID={{.ID}}" role="button">Eliminar</a>
+                |
+                <a name="" id="" class="btn-warning" href="/editar?ID={{.ID}}" role="button">Editar</a>
+                          
+                </td>
             </tr>
+
+        {{end}}
+    <a name="" id=""   href="/crear" role="button">Crear Ticket</a> <br>
+    <a name="" id=""   href="/crear" role="button">Buscar Ticket</a> <br>
 
         </tbody>
     </table>
+
+    
 {{template "Fin"}}
 {{end}}

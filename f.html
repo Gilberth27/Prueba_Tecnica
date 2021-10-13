@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+ <div class = "contanier">
+    <div class="card">
+        <div class="card-header">
+            Ticket
+        </div>
+        <div class="card-body">
+            <form method = "post" action = "/actualizar" >
+
+                 <div class="form-group">
+                     <label class="sr-only" for="inputName">ID del ticket</label>
+                     <input type="text" class="form-control" name="ID" value= {{.ID}} id="ID" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Usuario"></label>
+                    <small id="helpId" class="form-text text-muted">Usuario</small> <br>
+                    <input type="text"
+                      class="form-control" name="usuario" value= {{.USUARIO}} id="usuario" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+                  <div class="form-group">
+                    <label for="Fecha Creacion"></label>
+                    <small id="helpId" class="form-text text-muted">Fecha Creacion</small> <br>
+                    <input type="text"
+                      class="form-control" name="creacion" value= {{.FECHA_CRE}} id="creacion" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+                  <div class="form-group">
+                    <label for="Fecha Actualizacion"></label>
+                    <small id="helpId" class="form-text text-muted">Fecha actualizacion</small> <br>
+                    <input type="text"
+                      class="form-control" name="actualizar" value= {{.FECHA_UPD}} id="actualizar" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+                  <div class="form-group">
+                    <label for="Estado"></label>
+                    <small id="helpId" class="form-text text-muted">Estado</small> <br>
+                    <input type="text"
+                      class="form-control" name="estado" value= {{.ESTADO}} id="estado" aria-describedby="helpId" placeholder="">
+                  </input>
+                  </div>
+
+
+                  <button type="submit"  class="btn btn-primary">Modificar Ticket </button>
+
+
+
+
+            </form>
+        </div>
+    </div>
+    </div>
+Prueba Tecnica
+</body>
+</html>
